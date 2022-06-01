@@ -12,6 +12,7 @@ var cert = fs.readFileSync('./certs/my-server-https-cert.crt', 'utf-8');
 var pvk = fs.readFileSync('./certs/my-server-private.key', 'utf-8');
 var uwIdpCert = fs.readFileSync('./certs/our-idp-server-https-cert.pem', 'utf-8');
 
+
 passport.serializeUser(function(user, done){
     done(null, user);
 });
