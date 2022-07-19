@@ -1,5 +1,5 @@
 module.exports ={
-    PORT_NO : 3000,
+    PORT_NO : 3001,
     DB_USER:'root',
     DB_PASS:'summerof2010',
     DB_HOST:'localhost',

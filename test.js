@@ -42,14 +42,14 @@ app.use(session({secret: fs.readFileSync('./certs/session-secret.txt', 'utf-8')}
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('ssoapi/', 
+app.get('/', 
     passport.authenticate('saml', {failureRedirect: '/login/fail'}), 
     function(req, res) {
         res.send('Hello World!');
     }
 );
 
-app.post('ssoapi/login/callback',
+app.post('/login/callback',
   passport.authenticate('saml', { failureRedirect: '/login/fail', failureFlash: true }),
   function(req, res) {
     res.redirect('/');
